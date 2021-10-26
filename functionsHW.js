@@ -23,4 +23,10 @@ result.push(str2.length)
 return result
 }
 
-console.log(getTwoLengths('hello', 'worldier'))
+function getMultipleLengths(arr){
+  let result = []
+  for (let i = 0; i<arr.length; i++)
+    result.push(arr[i].length)
+  return result
+}
+
