@@ -81,3 +81,11 @@ function euler(num){// problem 8
   return sum
 }
 
+function findNeedle(junk){
+  for(let i=0; i<junk.length; i++)
+    if (junk[i]=='needle')
+      return `found the needle at position ${i}`
+  return "I couldn't find the needle"
+}
+
+// console.log(findNeedle(['hay', 'junk', 'hay', 'hay', 'moreJunk', 'needle', 'randomJunk']))
