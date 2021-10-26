@@ -50,3 +50,34 @@ function transmogrify(num1, num2, num3){
   result = result ** num3
   return result
 }
+
+function fib(num){ // helper function to find fib
+if (num<=1)
+  return 1
+
+return fib(num-1)  + fib(num-2)
+}
+
+function euler(num){// problem 8
+  let arrEven = []
+  let arrFull = []
+  let sum = 0
+  let maxSum = 0
+
+  for (i=1; i<=num; i++){
+    let currentVal = fib(i)
+    sum += currentVal
+    arrFull.push(currentVal)
+    
+    if (currentVal%2==0)
+      arrEven.push(currentVal)
+
+    if (sum<4000000)
+      maxSum=sum
+  }
+  console.log(`Fib up to ${num} terms: ${arrFull}`)
+  console.log(`Even Fibs: ${arrEven}`)
+  console.log(`Largest sum under 4 mil up to ${num} terms: ${maxSum}`)
+  return sum
+}
+
