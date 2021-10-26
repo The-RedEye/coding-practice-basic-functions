@@ -45,3 +45,8 @@ function printLongestWord(arr){
   return longest
 }
 
+function transmogrify(num1, num2, num3){
+  result = num1 * num2
+  result = result ** num3
+  return result
+}
