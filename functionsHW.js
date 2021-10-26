@@ -2,8 +2,6 @@ function calculateCube(num){
 return num**3
 }
 
-console.log(calculateCube(5));
-
 function isAVowel(char){
   let vowels = 'AEIOU'
   if (vowels.includes(char.toUpperCase()))
@@ -12,9 +10,6 @@ function isAVowel(char){
   return false
 }
 
-console.log(isAVowel('a'))
-console.log(isAVowel('v'))
-console.log(isAVowel('E'))
 
 function getTwoLengths(str1, str2){
 let result = [];
@@ -28,5 +23,25 @@ function getMultipleLengths(arr){
   for (let i = 0; i<arr.length; i++)
     result.push(arr[i].length)
   return result
+}
+
+function maxOfThree(num1, num2, num3){
+  let largest = num1;
+  if (num2> largest)
+    largest = num2
+  if (num3> largest)
+    largest = num3
+  
+  return largest
+}
+
+function printLongestWord(arr){
+  let longest  = arr[0]
+  for(let i=0; i<arr.length; i++){
+    if (arr[i].length>longest.length)
+      longest = arr[i]
+  }
+
+  return longest
 }
 
